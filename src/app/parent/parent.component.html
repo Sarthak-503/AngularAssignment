@@ -1,0 +1,16 @@
+<div class="parent">
+<h1>Parent Component</h1>
+
+    <form #parentForm="ngForm" (ngSubmit)="onSubmit(parentForm.value)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" ngModel>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" ngModel>
+  
+    <button type="submit">Submit</button>
+  </form>
+  
+  <app-child [name]="name" [email]="email"></app-child>
+
+</div>
